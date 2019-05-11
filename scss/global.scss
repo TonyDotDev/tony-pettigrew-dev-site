@@ -1,0 +1,21 @@
+@import './abstractions.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $montserrat;
+  // overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

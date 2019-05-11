@@ -1,0 +1,60 @@
+.bg-svg {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  @media screen and (min-width: 1350px) {
+    width: 100%;
+    height: auto;
+  }
+
+  &__inner-stripe-1 {
+    animation: shimmer 7s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-2 {
+    animation: shimmer 7s 0.8s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-3 {
+    animation: shimmer 7s 1.6s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-4 {
+    animation: shimmer 7s 2.4s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-5 {
+    animation: shimmer 7s 3.2s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-6 {
+    animation: shimmer 7s 4s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-7 {
+    animation: shimmer 7s 4.8s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &__inner-stripe-8 {
+    animation: shimmer 7s 5.6s alternate-reverse infinite
+      cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
