@@ -2,10 +2,11 @@ import './bg-svg.scss';
 
 const BGSvg = () => (
   <svg
-    className="bg-svg"
+    className="bg-svg fade-in"
     viewBox="0 0 1378 776"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
   >
     <path d="M1378 0.4375H0V775.562H1378V0.4375Z" fill="url(#paint0_linear)" />
     <path

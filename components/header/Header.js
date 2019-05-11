@@ -7,15 +7,13 @@ const Header = () => {
   const [image, setImage] = useState({ isLinkHovered: false, src: '' });
 
   const handleMouseEnter = e => {
-    console.log(e.target.getAttribute('data-src'));
     setImage({ isLinkHovered: true, src: e.target.getAttribute('data-src') });
   };
 
-  const handleMouseLeave = e => {
+  const handleMouseLeave = () => {
     setImage({ ...image, isLinkHovered: false });
   };
 
-  console.log(image);
   return (
     <>
       <header className="header">
@@ -24,8 +22,11 @@ const Header = () => {
             <li>
               <Link href="/about">
                 <a
-                  data-src="/static/img/tony-keyboard.jpg"
-                  className="header__nav-link header__nav-link--bold"
+                  data-src="/static/img/tony-keyboard.png"
+                  data-alt="Tony on stage, playing a synthesizer"
+                  className="header__nav-link header__nav-link--bold slide-in-left"
+                  onFocus={handleMouseEnter}
+                  onBlur={handleMouseLeave}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -35,13 +36,24 @@ const Header = () => {
             </li>
             <li>
               <Link href="/work">
-                <a className="header__nav-link header__nav-link--bold">Work</a>
+                <a
+                  data-src="/static/img/crn-search-page.png"
+                  data-alt="Javascript code in a code editor window"
+                  className="header__nav-link header__nav-link--bold slide-in-left"
+                  onFocus={handleMouseEnter}
+                  onBlur={handleMouseLeave}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  Work
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/">
                 <a>
                   <img
+                    className="scale-in-center"
                     src="static/svg/logo.svg"
                     alt="logo, a T with a circle around it"
                   />
@@ -49,22 +61,22 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="header__nav-link">
+              <a href="#" className="header__nav-link slide-in-right">
                 Git
               </a>
             </li>
             <li>
-              <a href="#" className="header__nav-link">
+              <a href="#" className="header__nav-link slide-in-right">
                 Twit
               </a>
             </li>
             <li>
-              <a href="#" className="header__nav-link">
+              <a href="#" className="header__nav-link slide-in-right">
                 Linked
               </a>
             </li>
             <li>
-              <a href="#" className="header__nav-link">
+              <a href="#" className="header__nav-link slide-in-right">
                 Email
               </a>
             </li>
