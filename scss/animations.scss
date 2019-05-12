@@ -22,6 +22,14 @@
     cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.slide-in-bot {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  animation: slideInBot 400ms 400ms forwards
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 400ms forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -76,6 +84,19 @@
     visibility: hidden;
     opacity: 0;
     transform: translateY(-20px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBot {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
     visibility: visible;

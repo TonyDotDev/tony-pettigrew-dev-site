@@ -1,4 +1,4 @@
-import './bg-svg.scss';
+import './BGSvg.scss';
 
 const BGSvg = () => (
   <svg
