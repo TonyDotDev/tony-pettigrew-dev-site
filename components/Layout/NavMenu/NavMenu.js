@@ -4,10 +4,13 @@ import { useState } from 'react';
 import './NavMenu.scss';
 
 const NavMenu = ({ isOpen, handleToggleMenu }) => {
-  const [image, setImage] = useState({ isLinkHovered: false, src: '' });
+  const [image, setImage] = useState({
+    isLinkHovered: false,
+    src: '',
+  });
 
   const handleMouseEnter = e => {
-    setImage({ isLinkHovered: true, src: e.target.getAttribute('data-src') });
+    setImage({ src: e.target.getAttribute('data-src'), isLinkHovered: true });
   };
 
   const handleMouseLeave = () => {
@@ -87,15 +90,15 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
             </a>
           </li>
         </ul>
-      </nav>
-
-      <div className="nav-menu__img-display">
         <img
           className="nav-menu__close-button"
           src="/static/svg/arrow-right.svg"
           alt="menu exit button"
           onClick={handleToggleMenu}
         />
+      </nav>
+
+      <div className="nav-menu__img-display">
         <img
           className={`nav-menu__hidden-img ${
             image.isLinkHovered ? 'active' : ''
