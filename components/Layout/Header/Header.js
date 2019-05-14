@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import './Header.scss';
 
-const Header = ({ handleMenuIconClick, isLanding }) => {
+const Header = ({ handleToggleMenu, isLanding }) => {
   const hideBrandLogoClass = isLanding ? 'header__brand-logo--hidden' : '';
   return (
     <header className="header">
@@ -16,6 +16,7 @@ const Header = ({ handleMenuIconClick, isLanding }) => {
         </a>
       </Link>
       <img
+        onClick={handleToggleMenu}
         className="header__menu-icon scale-in-center"
         src="/static/svg/menu-icon.svg"
         alt="basic hamburger menu icon"

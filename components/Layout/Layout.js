@@ -8,14 +8,16 @@ import './Layout.scss';
 const Layout = ({ children, isLanding }) => {
   const [menu, setMenu] = useState({ isOpen: false });
 
-  const handleMenuIconClick = () => {
-    setMenu(prevState => ({ isOpen: !prevState }));
+  const handleToggleMenu = () => {
+    setMenu(prevState => ({ isOpen: !prevState.isOpen }));
   };
+
+  const { isOpen } = menu;
 
   return (
     <div className="layout">
-      <Header isLanding={isLanding} handleMenuIconClick={handleMenuIconClick} />
-      <NavMenu />
+      <Header isLanding={isLanding} handleToggleMenu={handleToggleMenu} />
+      <NavMenu isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
       {children}
     </div>
   );

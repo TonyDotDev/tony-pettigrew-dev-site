@@ -2,7 +2,7 @@
 @import '../../scss/animations.scss';
 
 body {
-  background-color: #220033;
+  background-color: $color-black;
   overflow-y: auto;
 
   @media screen and (min-height: 600px) {
@@ -15,7 +15,6 @@ body {
   width: 100%;
   height: 100%;
   max-height: 100vh;
-
   box-sizing: border-box;
   color: $color-white;
 
@@ -38,6 +37,7 @@ body {
 
     @media screen and (min-width: 1700px) {
       max-width: 900px;
+      margin: 15vh auto 0 auto;
     }
   }
 
@@ -100,23 +100,20 @@ body {
     margin-top: 8vh;
     margin-bottom: 2rem;
     font-size: 2rem;
-    color: $color-blue-light;
-    padding: 1rem 2rem;
-    border: 1px dashed $color-blue-light;
-    border-radius: 3px;
+    color: $color-gold;
+    padding: 1rem 0;
     letter-spacing: 2px;
     transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 
     &:hover,
     &:focus {
-      border: 1px solid $color-green;
-      background-color: $color-green;
-      color: $color-white;
+      border-bottom: 1px solid $color-blue-light;
+      color: $color-blue-light;
     }
 
     @media screen and (min-width: 700px) {
-      font-size: 2.5rem;
-      padding: 1.5rem 3rem;
+      font-size: 3rem;
+      padding: 1.5rem 0;
       margin-top: 12vh;
     }
   }

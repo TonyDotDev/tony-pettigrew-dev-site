@@ -1,3 +1,120 @@
+@import '../../../scss/abstractions.scss';
+@import '../../../scss/animations.scss';
+
 .nav-menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition-duration: 200ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-black;
+  z-index: 10;
+  display: flex;
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 100vh;
+  }
+
+  &__links-container {
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    @media screen and (min-width: 1200px) {
+      margin-top: 10vh;
+    }
+
+    & li {
+      margin: 4vh 0;
+    }
+  }
+
+  &__nav-link {
+    font-size: 5rem;
+    color: $color-white;
+    text-transform: uppercase;
+    transition: color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    &:focus,
+    &:hover {
+      color: $color-green-light;
+    }
+
+    @media screen and (min-width: 600px) {
+      font-size: 5rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 9rem;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 20vh;
+    }
+  }
+
+  &__social-link {
+    margin: 0 2rem;
+  }
+
+  &__img-display {
+    flex: 1;
+    position: relative;
+  }
+
+  &__close-button {
+    width: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    @media screen and (min-width: 600px) {
+      width: 5rem;
+    }
+  }
+
+  &__hidden-img {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+
+    &.active {
+      opacity: 0.5;
+    }
+  }
 }
