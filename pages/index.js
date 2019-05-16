@@ -5,7 +5,7 @@ import '../scss/pages/index.scss';
 
 const index = () => (
   <Layout isLanding={true}>
-    <div className="landing-page">
+    <main className="landing-page">
       <BGSvg />
       <div className="landing-page__content">
         <h1 className="landing-page__headline slide-in-top">Tony Pettigrew</h1>
@@ -20,7 +20,7 @@ const index = () => (
           get@tonypettigrew.dev
         </a>
       </div>
-    </div>
+    </main>
   </Layout>
 );
 

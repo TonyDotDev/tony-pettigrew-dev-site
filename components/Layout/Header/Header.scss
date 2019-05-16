@@ -6,7 +6,17 @@
   height: 83px;
   display: flex;
   box-sizing: border-box;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: $color-black;
+  padding: 0 1rem;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 5rem;
+  }
+  &--landing {
+    justify-content: center;
+    background-color: transparent;
+  }
   align-items: center;
   &__brand-logo {
     &--hidden {

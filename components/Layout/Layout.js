@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Header from './Header/Header';
 import NavMenu from './NavMenu/NavMenu';
@@ -8,11 +8,15 @@ import './Layout.scss';
 const Layout = ({ children, isLanding }) => {
   const [menu, setMenu] = useState({ isOpen: false });
 
+  const { isOpen } = menu;
+
+  useEffect(() => {
+    document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
+  });
+
   const handleToggleMenu = () => {
     setMenu(prevState => ({ isOpen: !prevState.isOpen }));
   };
-
-  const { isOpen } = menu;
 
   return (
     <div className="layout">
