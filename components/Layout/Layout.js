@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Header from './Header/Header';
 import NavMenu from './NavMenu/NavMenu';
+import Footer from './Footer/Footer';
 
 import './Layout.scss';
 
@@ -23,6 +24,7 @@ const Layout = ({ children, isLanding }) => {
       <Header isLanding={isLanding} handleToggleMenu={handleToggleMenu} />
       <NavMenu isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
       {children}
+      <Footer isLanding={isLanding} />
     </div>
   );
 };

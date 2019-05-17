@@ -40,7 +40,7 @@ const about = () => {
           </h2>
           <p className="paragraph">
             I graduated from Western Washington University in 2012 with a B.S.
-            in CellBiology. After a stem cell culture internship at University
+            in Cell Biology. After a stem cell culture internship at University
             of Pittsburgh Medical Center and a year working as a histology
             technician at Presage Biosciences, I was on the hunt for a career
             that was fulfilling to me.

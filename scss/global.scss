@@ -29,16 +29,15 @@ ul {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    font-size: 4rem;
+  }
   & span {
     font-size: 3rem;
     font-weight: 300;
     @media screen and (min-width: 1200px) {
       font-size: 4rem;
     }
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 4rem;
   }
 }
 
