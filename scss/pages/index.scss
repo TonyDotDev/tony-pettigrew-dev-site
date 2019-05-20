@@ -2,7 +2,6 @@
 @import '../../scss/animations.scss';
 
 body {
-  background-color: $color-black;
   overflow-y: auto;
   position: relative;
   @media screen and (min-height: 600px) {

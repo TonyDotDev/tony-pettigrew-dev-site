@@ -1,32 +1,10 @@
-body {
-  background-color: #ffffff;
-}
+@import '../abstractions.scss';
 
 .about {
-  margin-top: 5rem;
-  padding-left: calc(100vw - 100%);
-  @media screen and (min-width: 400px) {
-    text-align: center;
-  }
-
-  @media screen and (min-width: 800px) {
-    margin-top: 7rem;
-  }
-
-  @media screen and (min-width: 700px) {
-    text-align: left;
-  }
+  @extend %page-container;
 
   &__content {
-    margin-top: 5rem;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 1rem;
-
-    @media screen and (min-width: 1200px) {
-      max-width: 950px;
-      margin-top: 10rem;
-    }
+    @extend %content-wrapper;
   }
 
   &__img-display {

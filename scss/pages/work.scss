@@ -1,0 +1,9 @@
+@import '../abstractions.scss';
+
+.work {
+  @extend %page-container;
+
+  &__recent-projects {
+    @extend %content-wrapper;
+  }
+}
