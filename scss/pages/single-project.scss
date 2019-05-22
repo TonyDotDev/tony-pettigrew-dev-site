@@ -1,0 +1,81 @@
+@import '../abstractions.scss';
+
+.single-project {
+  @extend %page-container;
+  @extend %content-wrapper;
+  text-align: center;
+  margin-top: 5vh;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    max-width: 1200px;
+    margin-top: 12vh;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2vh;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      & p {
+        max-width: 50%;
+        margin-right: 2vw;
+      }
+    }
+  }
+  &__img {
+    max-width: 50%;
+    padding-left: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3vh 0 10vh 0;
+    @media screen and (min-width: 800px) {
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 10vh 0 10vh 0;
+
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $color-green-dark;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: 7vh;
+    @media screen and (min-width: 800px) {
+      margin: 5vh 2vw;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      margin: 2.5vh 5vw 2.5vh 0;
+    }
+  }
+
+  &__link-icon {
+    margin-bottom: 1rem;
+    @media screen and (min-width: 800px) {
+      height: 3rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: initial;
+      margin: 0 1rem 0 0;
+    }
+  }
+}

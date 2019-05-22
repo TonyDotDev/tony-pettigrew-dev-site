@@ -11,7 +11,7 @@ const about = () => {
             <span>About</span>
             {` `}Tony
           </h2>
-          <p className="paragraph--lg">
+          <p className="paragraph--lg paragraph--black">
             My name is Tony Pettigrew and I’m a web developer based in Seattle,
             Wa.
           </p>

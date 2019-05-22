@@ -95,7 +95,7 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
             cy="26"
             r="24"
             stroke="#14B0B0"
-            stroke-width="4"
+            strokeWidth="4"
           />
           <path
             className={`nav-menu__logo-letter ${activeClass}`}

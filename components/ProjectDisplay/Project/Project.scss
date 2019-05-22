@@ -10,10 +10,10 @@
 
   @media screen and (min-width: 1200px) {
     width: 30%;
-    text-align: left;
   }
   &__img {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
   &__title {
     color: $color-green-dark;

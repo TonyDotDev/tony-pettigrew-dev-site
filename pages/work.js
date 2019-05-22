@@ -15,8 +15,8 @@ const work = ({ projects }) => (
           A selection of personal projects and professional work that I have
           developed over the last 2 years.
         </p>
-        <ProjectDisplay projects={projects} />
       </section>
+      <ProjectDisplay projects={projects} />
     </main>
   </Layout>
 );

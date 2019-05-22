@@ -53,9 +53,12 @@ ul {
   &--lg {
     font-size: 2.2rem;
     line-height: 170%;
-    color: $color-black;
+    color: $color-charcoal;
     @media screen and (min-width: 1200px) {
       font-size: 2.5rem;
     }
+  }
+  &--black {
+    color: $color-black;
   }
 }

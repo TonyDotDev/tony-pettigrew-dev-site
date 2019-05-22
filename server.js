@@ -12,9 +12,35 @@ app.prepare().then(() => {
   const server = express();
   // **middleware and routes go here**
 
-  server.get('/api/projects', (req, res) => {
-    console.log('server working');
+  server.get('/project/:slug', (req, res) => {
+    return app.render(req, res, '/project', {
+      slug: req.params.slug,
+    });
+  });
 
+  server.get('/api/project/:slug', (req, res) => {
+    const { slug } = req.params;
+
+    Prismic.getApi(process.env.PRISMIC_URI, {
+      accessToken: process.env.PRISMIC_TOKEN,
+    })
+      .then(api =>
+        api.query([Prismic.Predicates.at('my.project.project_slug', slug)]),
+      )
+      .then(
+        response => {
+          res
+            .json({ project: response.results, status: 'success' })
+            .status(200);
+        },
+        err => {
+          res.json({ err, status: 'failed' }).status(500);
+        },
+      )
+      .catch(err => res.json({ err, status: 'failed' }).status(500));
+  });
+
+  server.get('/api/projects', (req, res) => {
     Prismic.getApi(process.env.PRISMIC_URI, {
       accessToken: process.env.PRISMIC_TOKEN,
     })
