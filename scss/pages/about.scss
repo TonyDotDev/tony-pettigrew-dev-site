@@ -1,4 +1,5 @@
 @import '../abstractions.scss';
+@import '../animations.scss';
 
 .about {
   @extend %page-container;
@@ -30,6 +31,8 @@
     width: 100%;
     margin-bottom: 2rem;
     max-width: 339px;
+    opacity: 0;
+    animation: slideInLeft 200ms forwards cubic-bezier(0.47, 0, 0.745, 0.715);
 
     @media screen and (min-width: 800px) {
       margin: 0 0.5rem;

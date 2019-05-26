@@ -3,9 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 650px;
-  margin: 8rem auto 0 auto;
+  margin: 5vh auto 0 auto;
 
   @media screen and (min-width: 1200px) {
+    margin: 8rem auto 0 auto;
+
     max-width: 1200px;
   }
 }

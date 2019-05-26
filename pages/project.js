@@ -16,7 +16,7 @@ const project = ({ project }) => {
           {data.project_name[0].text}
         </h2>
         <div className="single-project__content">
-          <p className="paragraph--lg">{data.full_description[0].text}</p>
+          <p className="paragraph">{data.full_description[0].text}</p>
           <img
             src={data.display_image.url}
             alt=""
@@ -35,7 +35,10 @@ const project = ({ project }) => {
             />
             <span>Visit Site</span>
           </a>
-          <Link href="#">
+          <Link
+            href={`/project?slug=${data.next_project_slug}`}
+            as={`/project/${data.next_project_slug}`}
+          >
             <a className="single-project__link">
               {' '}
               <img

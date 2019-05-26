@@ -16,7 +16,10 @@ const index = () => (
           I build customized web solutions for your business and personal
           ventures using Javascript. Need help with a project? Let’s talk!
         </p>
-        <a href="#" className="landing-page__email slide-in-bot">
+        <a
+          href="mailto:get@tonypettigrew.dev?subject=I need a website!"
+          className="landing-page__email slide-in-bot"
+        >
           get@tonypettigrew.dev
         </a>
       </div>

@@ -11,10 +11,18 @@ body {
 a {
   text-decoration: none;
   outline: none;
+  &:focus,
+  &:active {
+    outline: 1px $color-green-light solid;
+  }
 }
 
 img {
   display: block;
+  &:focus,
+  &:active {
+    outline: 1px $color-green-light solid;
+  }
 }
 
 ul {

@@ -12,13 +12,16 @@ const about = () => {
             {` `}Tony
           </h2>
           <p className="paragraph--lg paragraph--black">
-            My name is Tony Pettigrew and I’m a web developer based in Seattle,
-            Wa.
+            My name is Tony Pettigrew and I’m a full stack web developer based
+            in Seattle, Wa.
           </p>
           <p className="paragraph">
-            I am the web development half of Pando Media. When I’m not working
-            on a client based project, I’m exploring new web tech or creating
-            patches for my Juno-60.
+            I am professionaly passionate about two things. FIRST, the
+            creative/technical process involved with materializing web
+            appliacations. SECONDLY, helping others through the former to
+            acheive an optimized solution. When I’m not working on a client
+            based project, I love exploring new web tech or creating patches for
+            my Juno-60 (as pictured below) in the depths of my studio.
           </p>
         </section>
         <div className="about__img-display">
@@ -42,15 +45,20 @@ const about = () => {
             I graduated from Western Washington University in 2012 with a B.S.
             in Cell Biology. After a stem cell culture internship at University
             of Pittsburgh Medical Center and a year working as a histology
-            technician at Presage Biosciences, I was on the hunt for a career
-            that was fulfilling to me.
+            technician at Presage Biosciences, I was feeling disatisfied with
+            the work that I was involved in.
           </p>
           <p className="paragraph">
             During the Summer of 2017 I bought a laptop to build a website for
-            my music. In the following months, I would discover a love for
-            programatic problem solving that was unmet by any other endeavor in
-            my life. I continue to cherrish the opportunity I have, each day, to
-            learn something new.
+            my music. I thought, "how hard can it be, right?". In the following
+            months, I would discover a love for programatic problem solving that
+            was unmet by any other endeavor in my life.
+          </p>
+          <p className="paragraph">
+            After many late nights of slamming my head against the whiteboard,
+            reading through docs and console logging all the things, I still
+            cherrish the opportunity that I have, each day, to continue learning
+            and progressing.
           </p>
         </section>
       </main>

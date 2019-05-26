@@ -17,7 +17,9 @@ const Header = ({ handleToggleMenu, isLanding }) => {
         </a>
       </Link>
       <img
+        tabIndex="0"
         onClick={handleToggleMenu}
+        onKeyUp={handleToggleMenu}
         className="header__menu-icon scale-in-center"
         src="/static/svg/menu-icon.svg"
         alt="basic hamburger menu icon"

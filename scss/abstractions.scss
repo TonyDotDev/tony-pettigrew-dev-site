@@ -1,3 +1,5 @@
+@import './animations.scss';
+
 // variables
 
 // colors
@@ -41,6 +43,8 @@ $montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
   max-width: 650px;
   margin: 0 auto;
   padding: 0 1rem;
+  opacity: 0;
+  animation: fadeIn 300ms forwards cubic-bezier(0.47, 0, 0.745, 0.715);
 
   @media screen and (min-width: 1200px) {
     max-width: 950px;

@@ -7,31 +7,46 @@ const Footer = ({ isLanding }) =>
           I love helping great people to pursue their dream projects. Sound like
           you?
         </p>
-        <a className="footer__cta-link" href="#">
+        <a
+          className="footer__cta-link"
+          href="mailto:get@tonypettigrew.dev?subject=I need a website!"
+        >
           Let's get started
         </a>
       </div>
       <ul className="footer__contact-links">
         <li>
-          <a href="#" className="footer__contact-link">
+          <a
+            href="mailto:get@tonypettigrew.dev?subject=I need a website!"
+            className="footer__contact-link"
+          >
             <img src="/static/svg/mail-icon.svg" alt="email icon" />
             <span>Get@tonypettigrew.dev</span>
           </a>
         </li>
         <li>
-          <a href="#" className="footer__contact-link">
+          <a
+            href="https://github.com/NeverEnder4"
+            className="footer__contact-link"
+          >
             <img src="/static/svg/git-icon.svg" alt="Github icon" />
             <span>On Github</span>
           </a>
         </li>
         <li>
-          <a href="#" className="footer__contact-link">
+          <a
+            href="https://twitter.com/NeverEnder_4"
+            className="footer__contact-link"
+          >
             <img src="/static/svg/twit-icon.svg" alt="Twitter icon" />
             <span>On Twitter</span>
           </a>
         </li>
         <li>
-          <a href="#" className="footer__contact-link">
+          <a
+            href="https://www.linkedin.com/in/tony-pettigrew-6b659455/"
+            className="footer__contact-link"
+          >
             <img src="/static/svg/linked-icon.svg" alt="Linkedin icon" />
             <span>On Linkedin</span>
           </a>

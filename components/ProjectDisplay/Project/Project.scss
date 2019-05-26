@@ -1,9 +1,12 @@
 @import '../../../scss/abstractions.scss';
+@import '../../../scss/animations.scss';
 
 .project {
   width: 100%;
   margin-bottom: 9vh;
   text-align: center;
+  animation: slideInLeft 200ms forwards cubic-bezier(0.47, 0, 0.745, 0.715);
+
   @media screen and (min-width: 700px) {
     width: 40%;
   }
@@ -11,9 +14,16 @@
   @media screen and (min-width: 1200px) {
     width: 30%;
   }
+
+  & a:focus img,
+  a:focus img {
+    box-shadow: 0px 2px 4px rgba($color-black, 0.4);
+  }
+
   &__img {
     width: 95%;
     margin: 0 auto;
+    transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   &__title {
     color: $color-green-dark;

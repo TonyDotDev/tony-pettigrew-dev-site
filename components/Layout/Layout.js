@@ -15,8 +15,10 @@ const Layout = ({ children, isLanding }) => {
     document.body.style.overflowY = isOpen ? 'hidden' : 'auto';
   });
 
-  const handleToggleMenu = () => {
-    setMenu(prevState => ({ isOpen: !prevState.isOpen }));
+  const handleToggleMenu = e => {
+    e.persist();
+    if (e.type === 'click' || (e.type === 'keyup' && e.keyCode === 13))
+      setMenu(prevState => ({ isOpen: !prevState.isOpen }));
   };
 
   return (

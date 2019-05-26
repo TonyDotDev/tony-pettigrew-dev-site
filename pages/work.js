@@ -9,11 +9,11 @@ const work = ({ projects }) => (
       <section className="work__recent-projects">
         <h2 className="sub-headline">
           <span>Recent</span>
-          {` `}Projects
+          {` `}Work
         </h2>
         <p className="paragraph">
-          A selection of personal projects and professional work that I have
-          developed over the last 2 years.
+          A selection of personal projects and professional work, developed by
+          me over the last 2 years.
         </p>
       </section>
       <ProjectDisplay projects={projects} />

@@ -40,7 +40,10 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
           <li
             className={`nav-menu__item nav-menu__item--contact ${activeClass}`}
           >
-            <a href="#" className="nav-menu__nav-link">
+            <a
+              href="mailto:get@tonypettigrew.dev?subject=I need a website!"
+              className="nav-menu__nav-link"
+            >
               Contact
               <span className="mask">
                 <span>Contact</span>
@@ -53,31 +56,45 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
         </ul>
         <ul className={`nav-menu__social-links ${activeClass}`}>
           <li>
-            <a href="#" className="nav-menu__social-link">
+            <a
+              href="mailto:get@tonypettigrew.dev?subject=I need a website!"
+              className="nav-menu__social-link"
+            >
               <img src="/static/svg/mail-icon.svg" alt="email icon" />
             </a>
           </li>
           <li>
-            <a href="#" className="nav-menu__social-link">
+            <a
+              href="https://github.com/NeverEnder4"
+              className="nav-menu__social-link"
+            >
               <img src="/static/svg/git-icon.svg" alt="github icon" />
             </a>
           </li>
           <li>
-            <a href="#" className="nav-menu__social-link">
+            <a
+              href="https://twitter.com/NeverEnder_4"
+              className="nav-menu__social-link"
+            >
               <img src="/static/svg/twit-icon.svg" alt="twitter icon" />
             </a>
           </li>
           <li>
-            <a href="#" className="nav-menu__social-link">
+            <a
+              href="https://www.linkedin.com/in/tony-pettigrew-6b659455/"
+              className="nav-menu__social-link"
+            >
               <img src="/static/svg/linked-icon.svg" alt="linkdin icon" />
             </a>
           </li>
         </ul>
         <img
+          tabIndex="1"
           className="nav-menu__close-button"
           src="/static/svg/arrow-right.svg"
           alt="menu exit button"
           onClick={handleToggleMenu}
+          onKeyUp={handleToggleMenu}
         />
       </nav>
 
