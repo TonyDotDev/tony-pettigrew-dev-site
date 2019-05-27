@@ -1,4 +1,9 @@
 {
-  "version": 1,
-  "alias": ["www.tonypettigrew.dev"]
+  "version": 2,
+  "name": "tonypettigrew.dev",
+  "alias": ["tonypettigrew.dev", "www.tonypettigrew.dev"],
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "routes": [
+    { "src": "/project/(?<slug>[^/]+)$", "dest": "/project?slug=$slug" }
+  ]
 }

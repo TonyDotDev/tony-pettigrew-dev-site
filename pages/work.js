@@ -1,6 +1,8 @@
 import Layout from '../components/Layout/Layout';
 import ProjectDisplay from '../components/ProjectDisplay/ProjectDisplay';
 
+import { getAllProjects } from '../cms/prismic';
+
 import '../scss/pages/work.scss';
 
 const work = ({ projects }) => (
@@ -22,15 +24,7 @@ const work = ({ projects }) => (
 );
 
 work.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/projects').catch(err => {
-    if (err)
-      return {
-        json: () => ({
-          projects: [],
-        }),
-      };
-  });
-  const { projects } = await res.json();
+  const projects = await getAllProjects();
 
   return { projects };
 };

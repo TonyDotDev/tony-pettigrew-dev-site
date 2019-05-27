@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import { getProjectBySlug } from '../cms/prismic';
 import Layout from '../components/Layout/Layout';
 
 import '../scss/pages/single-project.scss';
@@ -68,8 +68,7 @@ const project = ({ project }) => {
 
 project.getInitialProps = async ({ query }) => {
   const { slug } = query;
-  const response = await fetch(`http://localhost:3000/api/project/${slug}`);
-  const { project } = await response.json();
+  const project = await getProjectBySlug(slug);
 
   return { project };
 };

@@ -13,8 +13,8 @@ const index = () => (
           Full Stack Web Developer
         </h2>
         <p className="landing-page__intro slide-in-left">
-          I build customized web solutions for your business and personal
-          ventures using Javascript. Need help with a project? Let’s talk!
+          I build custom web solutions for your business and personal needs
+          using Javascript. Want help with a project? Let’s talk!
         </p>
         <a
           href="mailto:get@tonypettigrew.dev?subject=I need a website!"

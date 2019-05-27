@@ -2,10 +2,10 @@
   "name": "Tony-Pettigrew-Dev-Portfolio",
   "version": "0.0.0",
   "description": "Tony Pettigrew Professional Website",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
-    "build": "next build",
+    "dev": "next",
+    "now-build": "next build",
     "start": "next start"
   },
   "keywords": [
