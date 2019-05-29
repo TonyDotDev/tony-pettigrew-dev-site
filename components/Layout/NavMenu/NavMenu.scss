@@ -196,12 +196,14 @@
   &__close-button {
     width: 3rem;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1.5rem;
+    right: 2.5rem;
     z-index: 10;
     cursor: pointer;
-    @media screen and (min-width: 600px) {
-      width: 5rem;
+    @media screen and (min-width: 1200px) {
+      width: 4rem;
+      top: 1rem;
+      right: 7rem;
     }
   }
 }

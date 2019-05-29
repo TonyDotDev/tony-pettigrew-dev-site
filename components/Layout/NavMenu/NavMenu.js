@@ -2,10 +2,14 @@ import Link from 'next/link';
 
 import './NavMenu.scss';
 
-const NavMenu = ({ isOpen, handleToggleMenu }) => {
+const NavMenu = ({ isOpen, handleToggleMenu, pathname }) => {
   const menuOpenClass = isOpen ? 'nav-menu--open' : '';
 
   const activeClass = isOpen ? 'active' : '';
+
+  const handleClickOnSamePageLink = e => {
+    if (e.currentTarget.getAttribute('href') === pathname) handleToggleMenu(e);
+  };
 
   return (
     <div className={`nav-menu ${menuOpenClass}`}>
@@ -13,7 +17,10 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
         <ul className="nav-menu__nav-links">
           <li className={`nav-menu__item nav-menu__item--about ${activeClass}`}>
             <Link href="/about">
-              <a className="nav-menu__nav-link">
+              <a
+                onClick={handleClickOnSamePageLink}
+                className="nav-menu__nav-link"
+              >
                 About
                 <span className="mask">
                   <span>About</span>
@@ -26,7 +33,10 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
           </li>
           <li className={`nav-menu__item  nav-menu__item--work ${activeClass}`}>
             <Link href="/work">
-              <a className="nav-menu__nav-link">
+              <a
+                onClick={handleClickOnSamePageLink}
+                className="nav-menu__nav-link"
+              >
                 Work
                 <span className="mask">
                   <span>Work</span>
@@ -44,12 +54,12 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
               href="mailto:get@tonypettigrew.dev?subject=I need a website!"
               className="nav-menu__nav-link"
             >
-              Contact
+              Email
               <span className="mask">
-                <span>Contact</span>
+                <span>Email</span>
               </span>
               <span className="mask">
-                <span>Contact</span>
+                <span>Email</span>
               </span>
             </a>
           </li>
@@ -99,7 +109,6 @@ const NavMenu = ({ isOpen, handleToggleMenu }) => {
       </nav>
 
       <div className="nav-menu__img-display">
-        {/* <img src="/static/svg/logo.svg" alt="logo" /> */}
         <svg
           className="nav-menu__logo"
           viewBox="0 0 52 52"

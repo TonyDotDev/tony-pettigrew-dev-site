@@ -4,7 +4,7 @@ const Footer = ({ isLanding }) =>
     <footer className="footer">
       <div className="footer__cta">
         <p className="footer__cta-msg">
-          I love helping great people to pursue their dream projects. Sound like
+          I love helping great people pursue their dream projects. Sound like
           you?
         </p>
         <a
@@ -29,7 +29,11 @@ const Footer = ({ isLanding }) =>
             href="https://github.com/NeverEnder4"
             className="footer__contact-link"
           >
-            <img src="/static/svg/git-icon.svg" alt="Github icon" />
+            <img
+              className="github-icon"
+              src="/static/svg/git-icon.svg"
+              alt="Github icon"
+            />
             <span>On Github</span>
           </a>
         </li>

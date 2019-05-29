@@ -5,8 +5,8 @@ import { getAllProjects } from '../cms/prismic';
 
 import '../scss/pages/work.scss';
 
-const work = ({ projects }) => (
-  <Layout isLanding={false}>
+const work = ({ projects, pathname }) => (
+  <Layout pathname={pathname} isLanding={false}>
     <main className="work">
       <section className="work__recent-projects">
         <h2 className="sub-headline">
@@ -15,7 +15,7 @@ const work = ({ projects }) => (
         </h2>
         <p className="paragraph">
           A selection of personal projects and professional work, developed by
-          me over the last 2 years.
+          me this year.
         </p>
       </section>
       <ProjectDisplay projects={projects} />
@@ -23,10 +23,9 @@ const work = ({ projects }) => (
   </Layout>
 );
 
-work.getInitialProps = async () => {
+work.getInitialProps = async ({ pathname }) => {
   const projects = await getAllProjects();
-
-  return { projects };
+  return { projects, pathname };
 };
 
 export default work;

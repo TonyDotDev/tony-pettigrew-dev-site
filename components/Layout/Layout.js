@@ -6,7 +6,7 @@ import Footer from './Footer/Footer';
 
 import './Layout.scss';
 
-const Layout = ({ children, isLanding }) => {
+const Layout = ({ children, isLanding, pathname }) => {
   const [menu, setMenu] = useState({ isOpen: false });
 
   const { isOpen } = menu;
@@ -24,7 +24,11 @@ const Layout = ({ children, isLanding }) => {
   return (
     <div className="layout">
       <Header isLanding={isLanding} handleToggleMenu={handleToggleMenu} />
-      <NavMenu isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
+      <NavMenu
+        pathname={pathname}
+        isOpen={isOpen}
+        handleToggleMenu={handleToggleMenu}
+      />
       {children}
       <Footer isLanding={isLanding} />
     </div>

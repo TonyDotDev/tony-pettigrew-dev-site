@@ -66,6 +66,10 @@ ul {
       font-size: 2.5rem;
     }
   }
+  &--italic {
+    font-style: italic;
+    font-weight: 200;
+  }
   &--black {
     color: $color-black;
   }
